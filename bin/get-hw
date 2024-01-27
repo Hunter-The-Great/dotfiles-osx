@@ -1,0 +1,2 @@
+#!/bin/sh
+python3 /Users/Benjamin/Desktop/School/CS1342-TA/Program_Getting/hw.py -t /Users/Benjamin/Desktop/Misc./School/CS1342-TA/Program_Getting/token.txt /Users/Benjamin/Desktop/Misc./School/CS1342-TA/Program_Getting/class.txt $1 ~/Desktop/Programs
