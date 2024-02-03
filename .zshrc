@@ -12,8 +12,8 @@ alias entry='cd ~/library/babel; nvim journal'
 alias filePaths='defaults write com.apple.finder _FXShowPosixPathInTitle -bool'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias config="cd ~/.config/alacritty; nvim alacritty.toml"
-alias init="cd ~/.config/nvim; nvim init.lua"
 
 path+=("/Users/Benjamin/bin")
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
