@@ -17,3 +17,6 @@ path+=("/Users/Benjamin/bin")
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
