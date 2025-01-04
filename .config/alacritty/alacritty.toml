@@ -2,9 +2,36 @@ import = [
     "~/.config/alacritty/themes/themes/hyper.toml"
 ]
 
+working_directory = "None"
+live_config_reload = true
+ipc_socket = true
+
 [shell]
 program = "/bin/zsh"
 args = [ "-l", "-c", "tmux attach || tmux new -A -s home" ]
+
+[window]
+dimensions = {columns = 0, lines = 0}
+position = "none"
+padding = {x = 0, y = 0}
+dynamic_padding = false
+decorations = "buttonless"
+opacity = 0.9
+blur = true
+startup_mode = "Windowed"
+title = "Alacritty"
+dynamic_title = true
+decorations_theme_variant = "Dark"
+resize_increments = false
+option_as_alt = "None"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[colors]
+cursor = {text = "CellBackground", cursor = "CellForeground"}
+vi_mode_cursor = {text = "CellBackground", cursor = "CellForeground"}
 
 [colors.hints.end]
 background = "#282a36"
@@ -30,20 +57,14 @@ foreground = "#44475a"
 background = "#44475a"
 text = "CellForeground"
 
-[colors.vi_mode_cursor]
-cursor = "CellForeground"
-text = "CellBackground"
-
 [selection]
 save_to_clipboard = true
 
-[env]
-LANG = "en_US.UTF-8"
-LC_CTYPE = "en_US.UTF-8"
-TERM = "alacritty"
-
 [font]
 size = 15.0
+offset = {x = 0, y = 0}
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
 
 [font.normal]
 family = "Hack Nerd Font Mono"
@@ -56,3 +77,12 @@ style = "Bold"
 [font.italic]
 family = "Hack Nerd Font Mono"
 style = "Italic"
+
+[font.bold_italic]
+family = "Hack Nerd Font Mono"
+style = "Bold Italic"
+
+[env]
+LANG = "en_US.UTF-8"
+LC_CTYPE = "en_US.UTF-8"
+TERM = "alacritty"

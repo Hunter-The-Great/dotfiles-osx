@@ -6,6 +6,16 @@ if [ -n "$selected_host" ]; then
 fi
 exit
 
+#@ ssh config
+tmux rename-window "SSH CONFIG"
+cd ~/.ssh/; nvim config
+exit
+
+#@ zshrc
+tmux rename-window "ZSHRC"
+cd ~/; nvim .zshrc
+exit
+
 #@ lazydocker
 lazydocker
 exit

@@ -1,22 +1,21 @@
-alias dt='cd ~/desktop'
-alias ali='sudo nvim ~/.zshrc'
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
-alias clr='clear'
+alias rc='nvim ~/.zshrc'
 alias wrt='sudo nvim /etc/motd'
 alias starWars='telnet towel.blinkenlights.nl'
-alias run='osascript -e'
-alias icns='sips -s format icns'
-alias keyRepeat='defaults write -g ApplePressAndHoldEnabled -bool'
 alias entry='cd ~/library/babel; nvim journal'
-alias filePaths='defaults write com.apple.finder _FXShowPosixPathInTitle -bool'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-alias config="cd ~/.config/alacritty; nvim alacritty.toml"
+alias config="cd ~/.config/ghostty; nvim config"
 
 path+=("/Users/Benjamin/bin")
+path+=("/Users/Benjamin/scripts")
+path+=('/Users/Benjamin/go/bin')
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/Benjamin/.bun/_bun" ] && source "/Users/Benjamin/.bun/_bun"

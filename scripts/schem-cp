@@ -1,0 +1,1 @@
+docker cp mc-server-dev-server-1:/server/worlds/world/generated/minecraft/structures/$1.nbt ~/desktop/$1.nbt
